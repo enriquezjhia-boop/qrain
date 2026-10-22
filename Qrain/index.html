@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b3b">
+  <title>QRain | Campus Umbrella Rental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <img src="images/logo.png" alt="QRain Logo"
+           onerror="this.style.display='none'">
+      <span>QRain<span class="blue-dot">.</span></span>
+    </a>
+
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#stations">Stations</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+
+    <button class="login-btn" id="loginBtn">Log In ↗</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="rain-overlay"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow">☂ YOUR CAMPUS, RAIN OR SHINE</span>
+
+        <h1>Caught in the rain?<br>
+          <span>Just scan.</span>
+        </h1>
+
+        <p class="description">
+          Your day doesn't have to stop because of the rain.
+          Borrow an umbrella from a nearby campus station
+          and keep moving.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="primary-btn" href="#stations">Find a Station <span>↗</span></a>
+          <a class="secondary-btn" href="#how">How It Works</a>
+        </div>
+
+        <div class="trust-row">
+          <span>✓ No app needed</span>
+          <span>✓ Easy returns</span>
+          <span>✓ Campus-ready</span>
+        </div>
+      </div>
+
+      <div class="floating-card">
+        <div class="card-top">
+          <span class="live-dot"></span>
+          <span>CAMPUS RENTAL</span>
+          <span class="umbrella-icon">☂</span>
+        </div>
+
+        <p class="muted">A little rain? No problem.</p>
+        <h2>Stay dry.<br>Keep moving.</h2>
+
+        <div class="price-row">
+          <div>
+            <strong>₱15</strong>
+            <span>/ rental</span>
+          </div>
+          <span class="duration">11 hours</span>
+        </div>
+
+        <a href="#stations" class="card-action">Explore stations →</a>
+      </div>
+
+      <div class="scroll-hint">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="how section" id="how">
+      <div class="section-heading">
+        <span class="eyebrow">SIMPLE BY DESIGN</span>
+        <h2>Rainy days, made easier.</h2>
+        <p>Four simple steps to get you where you need to go.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">⌖</div>
+          <h3>Find a station</h3>
+          <p>Choose a convenient umbrella station around campus.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">▦</div>
+          <h3>Scan the QR</h3>
+          <p>Scan the station's QR code to start your rental.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">☂</div>
+          <h3>Take an umbrella</h3>
+          <p>Pay ₱15 for an 11-hour rental period.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon">✓</div>
+          <h3>Return it</h3>
+          <p>Return your umbrella to a designated station.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stations section" id="stations">
+      <div class="section-heading">
+        <span class="eyebrow">YOUR CAMPUS, CONNECTED</span>
+        <h2>Find your nearest station.</h2>
+        <p>Choose a location to explore available rental points.</p>
+      </div>
+
+      <input id="stationSearch" class="station-search"
+             type="search" placeholder="⌕  Search campus stations...">
+
+      <div class="station-grid" id="stationGrid"></div>
+      <p class="station-count" id="stationCount"></p>
+    </section>
+
+    
+
+
+    <section class="faq section" id="faq">
+      <div class="section-heading">
+        <span class="eyebrow">GOOD TO KNOW</span>
+        <h2>Questions? We've got you.</h2>
+      </div>
+
+      <details>
+        <summary>How much does QRain cost?</summary>
+        <p>The rental rate is ₱15 for 11 hours.</p>
+      </details>
+
+      <details>
+        <summary>Do I need to install an app?</summary>
+        <p>This website is designed to let you explore the rental process without installing a separate app.</p>
+      </details>
+
+      <details>
+        <summary>Where can I return an umbrella?</summary>
+        <p>Use a designated QRain return station on campus.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="brand">QRain<span class="blue-dot">.</span></a>
+    <p>Made for rainy days on campus. ☂</p>
+    <span>© 2026 QRain</span>
+  </footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal"
+              aria-label="Close login">×</button>
+
+      <div class="modal-logo">☂</div>
+      <span class="eyebrow">WELCOME BACK</span>
+      <h2>Log in to QRain.</h2>
+      <p class="modal-description">
+        Sign in to access your QRain account.
+      </p>
+
+      <form id="loginForm">
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password"
+               placeholder="Enter your password" required minlength="4">
+
+        <button type="submit" class="primary-btn full-btn">Log In →</button>
+      </form>
+
+        <p class="demo-note" id="loginMessage">
+  Sign in to access your account and rental information.
+</p>
+      </p>
+    </div>
+  </div>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
